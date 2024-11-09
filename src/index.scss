@@ -13,6 +13,8 @@ html,
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 body {
@@ -48,4 +50,11 @@ h6 {
 
 #root {
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 45px;
+  height: 100%;
 }

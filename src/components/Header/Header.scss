@@ -1,0 +1,16 @@
+.kasa-header {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+
+  &__logo {
+    width: 210px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 24px;
+  }
+}
