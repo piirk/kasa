@@ -1,5 +1,6 @@
 .kasa-gallery {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 50px;
