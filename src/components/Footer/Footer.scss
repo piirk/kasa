@@ -8,11 +8,21 @@
   padding: 60px 20px 30px 20px;
   gap: 30px;
 
+  @media screen and (max-width: 1240px) {
+    gap: 20px;
+  }
+
   &__logo {
     width: 122px;
   }
 
   &__copy {
     font-size: 24px;
+
+    @media screen and (max-width: 1240px) {
+      font-size: 12px;
+      width: 120px;
+      text-align: center;
+    }
   }
 }

@@ -6,4 +6,12 @@
   padding: 50px;
   background-color: #f6f6f6;
   border-radius: 25px;
+
+  @media screen and (max-width: 1240px) {
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    padding: 0;
+    background-color: transparent;
+    gap: 20px;
+    border-radius: 0;
+  }
 }
