@@ -4,8 +4,8 @@ import './Gallery.scss'
 const Gallery = ({ elements }) => {
   return (
     <div className="kasa-gallery">
-      {elements.map((element, index) => {
-        return <Card key={index} {...element} />
+      {elements.map((element) => {
+        return <Card key={element.id} {...element} />
       })}
     </div>
   )
