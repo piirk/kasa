@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-    </nav>
+    <header>
+      <img src="/logo.svg" alt="Logo" />
+      <nav>
+        <Link to="/">Accueil</Link>
+        <Link to="/about">A propos</Link>
+      </nav>
+    </header>
   )
 }
 
