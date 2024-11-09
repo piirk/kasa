@@ -1,6 +1,6 @@
-import React from 'react';
-import './styles/App.css';
-import Home from './pages/Home/index';
+import React from 'react'
+import './styles/App.css'
+import Home from './pages/Home/index'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Home />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
