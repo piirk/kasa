@@ -3,8 +3,17 @@
   justify-content: space-between;
   width: 1240px;
 
+  @media screen and (max-width: 1240px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+
   &__logo {
     width: 210px;
+
+    @media screen and (max-width: 1240px) {
+      width: 145px;
+    }
   }
 
   &__nav {
@@ -12,5 +21,11 @@
     align-items: center;
     gap: 30px;
     font-size: 24px;
+
+    @media screen and (max-width: 1240px) {
+      gap: 25px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
   }
 }
