@@ -1,4 +1,5 @@
 import Collapse from '../../components/Collapse'
+import Rating from '../../components/Rating'
 import './Logement.scss'
 
 const Index = () => {
@@ -21,7 +22,7 @@ const Index = () => {
       picture:
         'https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg',
     },
-    rating: '5',
+    rating: '4',
     location: 'Ile de France - Paris 17e',
     equipments: [
       'Équipements de base',
@@ -53,7 +54,7 @@ const Index = () => {
             {logement.host.name}
             <img src={logement.host.picture} alt={logement.host.name}></img>
           </span>
-          <span>{logement.rating}</span>
+          <Rating rating={logement.rating} />
         </div>
       </div>
       <div className="kasa-logement__collapses-container">

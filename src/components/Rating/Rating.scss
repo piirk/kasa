@@ -1,0 +1,19 @@
+.kasa-rating {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  @media screen and (max-width: 1240px) {
+    gap: 5px;
+  }
+
+  .kasa-rating__star {
+    width: 25px;
+    height: 25px;
+
+    @media screen and (max-width: 1240px) {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
