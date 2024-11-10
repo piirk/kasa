@@ -34,20 +34,29 @@ const Index = () => {
   }
 
   return (
-    <div className="kasa-container">
+    <div className="kasa-container kasa-logement">
       <img src={logement.cover} alt={logement.title} />
-      <div>
-        <h1>{logement.title}</h1>
-        <span>{logement.location}</span>
+      <div className="kasa-logement__main-container">
+        <div className="kasa-logement__main-container__left">
+          <div className="kasa-logement__main-container__left__title">
+            <h1>{logement.title}</h1>
+            <span>{logement.location}</span>
+          </div>
+          <div className="kasa-logement__main-container__left__tags">
+            {logement.tags.map((tag, index) => (
+              <span key={index}>{tag}</span>
+            ))}
+          </div>
+        </div>
+        <div className="kasa-logement__main-container__right">
+          <span className="kasa-logement__main-container__right__host">
+            {logement.host.name}
+            <img src={logement.host.picture} alt={logement.host.name}></img>
+          </span>
+          <span>{logement.rating}</span>
+        </div>
       </div>
-      <div>
-        <span>
-          {logement.host.name}
-          <img src={logement.host.picture} alt={logement.host.name}></img>
-        </span>
-        <span>{logement.rating}</span>
-      </div>
-      <div>
+      <div className="kasa-logement__collapses-container">
         <Collapse title="Description" content={logement.description} />
         <Collapse
           title="Équipements"
