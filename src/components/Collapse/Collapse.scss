@@ -1,39 +1,58 @@
 .kasa-collapse {
   width: 100%;
   background-color: #f6f6f6;
+}
 
-  summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+details {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+details > summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #ff6060;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+
+  @media screen and (max-width: 1240px) {
+    font-size: 13px;
+  }
+
+  &::marker {
+    content: '';
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+p {
+  padding: 20px;
+
+  @media screen and (max-width: 1240px) {
     padding: 10px;
-    background-color: #ff6060;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    cursor: pointer;
-    user-select: none;
-
-    @media screen and (max-width: 1240px) {
-      font-size: 13px;
-    }
-
-    &::marker {
-      content: '';
-    }
-
-    &::-webkit-details-marker {
-      display: none;
-    }
+    font-size: 14px;
   }
+}
 
-  p {
-    padding: 20px;
+img.arrow {
+  transition: all 0.25s;
+}
 
-    @media screen and (max-width: 1240px) {
-      padding: 10px;
-      font-size: 14px;
-    }
-  }
+details[open] summary img.arrow {
+  transform: rotate(180deg);
+}
+
+details[open] {
+  max-height: 100vh;
 }
