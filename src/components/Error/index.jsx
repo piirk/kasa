@@ -1,7 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 import './Error.scss'
 
 const Error = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="kasa-container kasa-404-container">
       <span className="kasa-404">404</span>
