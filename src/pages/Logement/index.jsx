@@ -2,9 +2,11 @@ import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
+import Error from '../../components/Error'
 import './Logement.scss'
 
 const Index = () => {
+  // scroll to top when component is mounted
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -12,6 +14,15 @@ const Index = () => {
   const { id } = useParams()
   const logements = require('../../stores/logements.json')
   const logement = logements.find((logement) => logement.id === id)
+
+  // if logement is not found, display an error page
+  if (!logement) {
+    return (
+      <div className="kasa-container">
+        <Error />
+      </div>
+    )
+  }
 
   return (
     <div className="kasa-container kasa-logement">
