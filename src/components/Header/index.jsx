@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Header.scss'
 
 const Header = () => {
@@ -6,8 +6,18 @@ const Header = () => {
     <header className="kasa-header">
       <img src="/logo.svg" alt="Logo" className="kasa-header__logo" />
       <nav className="kasa-header__nav">
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A propos</Link>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          A propos
+        </NavLink>
       </nav>
     </header>
   )
