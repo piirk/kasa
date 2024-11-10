@@ -29,7 +29,10 @@ const Collapse = ({ title, content }) => {
             : { height: '0px' }
         }
       >
-        <div className="content"> {content} </div>
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: content }}
+        ></div>
       </div>
     </div>
   )

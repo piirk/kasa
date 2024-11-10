@@ -51,7 +51,9 @@ const Index = () => {
         <Collapse title="Description" content={logement.description} />
         <Collapse
           title="Équipements"
-          content={logement.equipments.join('<br>')}
+          content={
+            '<ul><li>' + logement.equipments.join('</li><li>') + '</li></ul>'
+          }
         />
       </div>
     </div>
