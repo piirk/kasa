@@ -1,9 +1,14 @@
 import { useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
 import './Logement.scss'
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const { id } = useParams()
   const logements = require('../../stores/logements.json')
   const logement = logements.find((logement) => logement.id === id)
