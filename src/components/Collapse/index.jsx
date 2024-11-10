@@ -1,15 +1,37 @@
+import React, { useState, useRef } from 'react'
 import './Collapse.scss'
 import arrow from './assets/arrow.svg'
 
 const Collapse = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  const contentRef = useRef()
+
   return (
-    <details className="kasa-collapse">
-      <summary>
+    <div className="kasa-collapse">
+      <button
+        className="kasa-collapse__button"
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {title}
-        <img src={arrow} alt="arrow" className="arrow"></img>
-      </summary>
-      <p>{content}</p>
-    </details>
+        <img
+          src={arrow}
+          alt="arrow"
+          className={`kasa-collapse__arrow ${isOpen ? 'kasa-collapse__arrow--open' : ''}`}
+        />
+      </button>
+
+      <div
+        className="content-parent"
+        ref={contentRef}
+        style={
+          isOpen
+            ? { height: contentRef.current.scrollHeight + 'px' }
+            : { height: '0px' }
+        }
+      >
+        <div className="content"> {content} </div>
+      </div>
+    </div>
   )
 }
 

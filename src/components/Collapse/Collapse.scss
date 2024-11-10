@@ -1,58 +1,59 @@
 .kasa-collapse {
   width: 100%;
   background-color: #f6f6f6;
-}
 
-details {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ff6060;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
 
-details > summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #ff6060;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
-  user-select: none;
-
-  @media screen and (max-width: 1240px) {
-    font-size: 13px;
+    @media screen and (max-width: 1240px) {
+      font-size: 13px;
+    }
   }
 
-  &::marker {
-    content: '';
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+
+    @media screen and (max-width: 1240px) {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--open {
+      transform: rotate(180deg);
+    }
   }
 
-  &::-webkit-details-marker {
-    display: none;
+  .content {
+    padding: 20px;
+    font-weight: 400;
+
+    @media screen and (max-width: 1240px) {
+      padding: 10px;
+      font-size: 14px;
+    }
   }
-}
 
-p {
-  padding: 20px;
-
-  @media screen and (max-width: 1240px) {
-    padding: 10px;
-    font-size: 14px;
+  .content-parent {
+    height: 0px;
+    overflow: hidden;
+    transition: height ease 0.3s;
   }
-}
 
-img.arrow {
-  transition: all 0.25s;
-}
-
-details[open] summary img.arrow {
-  transform: rotate(180deg);
-}
-
-details[open] {
-  max-height: 100vh;
+  .content-show {
+    height: 200px;
+    overflow: hidden;
+    transition: height ease 0.3s;
+  }
 }
