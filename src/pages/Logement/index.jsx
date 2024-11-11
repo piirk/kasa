@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
@@ -17,7 +17,7 @@ const Index = () => {
 
   // if logement is not found, redirect to error page
   if (!logement) {
-    window.location.href = '/error'
+    return <Navigate to="/error" replace />
   }
 
   return (
