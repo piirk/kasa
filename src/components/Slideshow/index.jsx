@@ -18,12 +18,16 @@ const Slideshow = ({ images }) => {
 
   return (
     <div className="kasa-carousel">
-      <button className="left" onClick={handlePrevious}>
-        <img src={leftArrow} alt="left" />
-      </button>
-      <button className="right" onClick={handleNext}>
-        <img src={rightArrow} alt="right" />
-      </button>
+      {length > 1 && (
+        <>
+          <button className="left" onClick={handlePrevious}>
+            <img src={leftArrow} alt="left" />
+          </button>
+          <button className="right" onClick={handleNext}>
+            <img src={rightArrow} alt="right" />
+          </button>
+        </>
+      )}
       <img src={images[index]} alt={`${index + 1}`} />
     </div>
   )
