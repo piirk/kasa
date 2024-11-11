@@ -36,8 +36,11 @@ const Index = () => {
           </div>
         </div>
         <div className="kasa-logement__main-container__right">
-          <span className="kasa-logement__main-container__right__host">
-            {logement.host.name}
+          <span
+            style={{ whiteSpace: 'pre-wrap' }}
+            className="kasa-logement__main-container__right__host"
+          >
+            {logement.host.name.replace(' ', '\u000A')}
             <img src={logement.host.picture} alt={logement.host.name}></img>
           </span>
           <Rating rating={logement.rating} />
