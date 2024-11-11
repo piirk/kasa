@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './Banner.scss'
 import homeCover from './assets/home.png'
 import aboutCover from './assets/about.png'
@@ -22,6 +23,11 @@ const Banner = ({ text, img }) => {
       <h1>{text}</h1>
     </div>
   )
+}
+
+Banner.propTypes = {
+  text: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
 }
 
 export default Banner

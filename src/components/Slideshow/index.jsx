@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import './Slideshow.scss'
 import leftArrow from './assets/left.svg'
 import rightArrow from './assets/right.svg'
@@ -31,6 +32,10 @@ const Slideshow = ({ images }) => {
       <img src={images[index]} alt={`${index + 1}`} />
     </div>
   )
+}
+
+Slideshow.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default Slideshow

@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Card from '../Card'
 import './Gallery.scss'
 
@@ -9,6 +11,10 @@ const Gallery = ({ elements }) => {
       })}
     </div>
   )
+}
+
+Gallery.propTypes = {
+  elements: PropTypes.array.isRequired,
 }
 
 export default Gallery

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import PropTypes from 'prop-types'
 import './Collapse.scss'
 import arrow from './assets/arrow.svg'
 
@@ -36,6 +37,11 @@ const Collapse = ({ title, content }) => {
       </div>
     </div>
   )
+}
+
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 }
 
 export default Collapse

@@ -1,3 +1,5 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import './Rating.scss'
 import star from './assets/star.svg'
 import starGrey from './assets/star-grey.svg'
@@ -15,6 +17,10 @@ const Rating = ({ rating }) => {
       ))}
     </div>
   )
+}
+
+Rating.propTypes = {
+  rating: PropTypes.number.isRequired,
 }
 
 export default Rating
