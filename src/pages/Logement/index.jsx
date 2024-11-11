@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
 import Error from '../../components/Error'
-import Carousel from '../../components/Carousel'
+import Slideshow from '../../components/Slideshow'
 import './Logement.scss'
 
 const Index = () => {
@@ -27,7 +27,7 @@ const Index = () => {
 
   return (
     <div className="kasa-container kasa-logement">
-      <Carousel images={logement.pictures} />
+      <Slideshow images={logement.pictures} />
       <div className="kasa-logement__main-container">
         <div className="kasa-logement__main-container__left">
           <div className="kasa-logement__main-container__left__title">

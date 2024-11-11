@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import './Carousel.scss'
+import './Slideshow.scss'
 import leftArrow from './assets/left.svg'
 import rightArrow from './assets/right.svg'
 
-const Carousel = ({ images }) => {
+const Slideshow = ({ images }) => {
   const [index, setIndex] = useState(0)
   const length = images.length
   const handlePrevious = () => {
@@ -29,4 +29,4 @@ const Carousel = ({ images }) => {
   )
 }
 
-export default Carousel
+export default Slideshow
