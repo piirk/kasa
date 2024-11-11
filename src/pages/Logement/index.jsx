@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
-import Error from '../../components/Error'
 import Slideshow from '../../components/Slideshow'
 import './Logement.scss'
 
@@ -16,13 +15,9 @@ const Index = () => {
   const logements = require('../../stores/logements.json')
   const logement = logements.find((logement) => logement.id === id)
 
-  // if logement is not found, display an error page
+  // if logement is not found, redirect to error page
   if (!logement) {
-    return (
-      <div className="kasa-container">
-        <Error />
-      </div>
-    )
+    window.location.href = '/error'
   }
 
   return (
