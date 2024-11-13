@@ -1,8 +1,8 @@
-import Banner from '../../components/Banner'
-import Gallery from '../../components/Gallery'
+import Banner from '../../components/Banner/Banner'
+import Gallery from '../../components/Gallery/Gallery'
 import logements from '../../stores/logements.json'
 
-const Index = () => {
+const Home = () => {
   return (
     <div className="kasa-container">
       <Banner text="Chez vous, partout et ailleurs" img="home" />
@@ -11,4 +11,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Home

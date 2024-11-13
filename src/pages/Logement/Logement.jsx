@@ -1,11 +1,11 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useEffect } from 'react'
-import Collapse from '../../components/Collapse'
-import Rating from '../../components/Rating'
-import Slideshow from '../../components/Slideshow'
+import Collapse from '../../components/Collapse/Collapse'
+import Rating from '../../components/Rating/Rating'
+import Slideshow from '../../components/Slideshow/Slideshow'
 import './Logement.scss'
 
-const Index = () => {
+const Logement = () => {
   // scroll to top when component is mounted
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -43,7 +43,7 @@ const Index = () => {
             {logement.host.name.replace(' ', '\u000A')}
             <img src={logement.host.picture} alt={logement.host.name}></img>
           </span>
-          <Rating rating={logement.rating} />
+          <Rating rating={parseInt(logement.rating)} />
         </div>
       </div>
       <div className="kasa-logement__collapses-container">
@@ -59,4 +59,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Logement

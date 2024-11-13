@@ -1,8 +1,8 @@
-import Banner from '../../components/Banner'
-import Collapse from '../../components/Collapse'
+import Banner from '../../components/Banner/Banner'
+import Collapse from '../../components/Collapse/Collapse'
 import './About.scss'
 
-const Index = () => {
+const About = () => {
   return (
     <div className="kasa-container">
       <Banner img="about" />
@@ -28,4 +28,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default About

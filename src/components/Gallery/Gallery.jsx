@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Card from '../Card'
+import Card from '../Card/Card'
 import './Gallery.scss'
 
-const Gallery = ({ elements }) => {
+const Gallery = ({ logements }) => {
   return (
     <div className="kasa-gallery">
-      {elements.map((element) => {
+      {logements.map((element) => {
         return <Card key={element.id} {...element} />
       })}
     </div>
@@ -14,7 +14,7 @@ const Gallery = ({ elements }) => {
 }
 
 Gallery.propTypes = {
-  elements: PropTypes.array.isRequired,
+  logements: PropTypes.array.isRequired,
 }
 
 export default Gallery
