@@ -3,10 +3,12 @@ import './Banner.scss'
 
 const Banner = ({ text, img }) => {
   return (
-    <div className="kasa-banner">
+    <figure className="kasa-banner">
       <img src={img} alt="Banner" className="kasa-banner__img" />
-      <h1>{text}</h1>
-    </div>
+      <figcaption>
+        <h1>{text}</h1>
+      </figcaption>
+    </figure>
   )
 }
 
