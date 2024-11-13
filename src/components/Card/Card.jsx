@@ -6,9 +6,13 @@ const Card = ({ id, cover, title }) => {
   return (
     <article className="kasa-thumb">
       <Link to={`/logement/${id}`}>
-        <img src={cover} alt={title} />
-        <div className="kasa-thumb__overlay"></div>
-        <h2>{title}</h2>
+        <figure>
+          <img src={cover} alt={title} />
+          <div className="kasa-thumb__overlay"></div>
+          <figcaption>
+            <h2>{title}</h2>
+          </figcaption>
+        </figure>
       </Link>
     </article>
   )
