@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Collapse from '../../components/Collapse/Collapse'
 import Rating from '../../components/Rating/Rating'
 import Slideshow from '../../components/Slideshow/Slideshow'
+import Host from '../../components/Host/Host'
 import './Logement.scss'
 
 const Logement = () => {
@@ -36,13 +37,7 @@ const Logement = () => {
           </div>
         </div>
         <div className="kasa-logement__main-container__right">
-          <span
-            style={{ whiteSpace: 'pre-wrap' }}
-            className="kasa-logement__main-container__right__host"
-          >
-            {logement.host.name.replace(' ', '\u000A')}
-            <img src={logement.host.picture} alt={logement.host.name}></img>
-          </span>
+          <Host host={logement.host} />
           <Rating rating={parseInt(logement.rating)} />
         </div>
       </div>
