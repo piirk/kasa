@@ -1,6 +1,7 @@
 import Banner from '../../components/Banner/Banner'
 import Collapse from '../../components/Collapse/Collapse'
 import './About.scss'
+import bannerAbout from '../../assets/about.png'
 
 const mockData = [
   {
@@ -28,7 +29,7 @@ const mockData = [
 const About = () => {
   return (
     <div className="kasa-container">
-      <Banner img="about" />
+      <Banner img={bannerAbout} />
       <div className="kasa-collapses">
         {mockData.map((data, index) => (
           <Collapse key={index} title={data.title} content={data.content} />
