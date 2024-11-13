@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Collapse from '../../components/Collapse/Collapse'
 import Rating from '../../components/Rating/Rating'
 import Slideshow from '../../components/Slideshow/Slideshow'
+import Tag from '../../components/Tag/Tag'
 import Host from '../../components/Host/Host'
 import './Logement.scss'
 
@@ -32,7 +33,7 @@ const Logement = () => {
           </div>
           <div className="kasa-logement__main-container__left__tags">
             {logement.tags.map((tag, index) => (
-              <span key={index}>{tag}</span>
+              <Tag key={index} text={tag} />
             ))}
           </div>
         </div>

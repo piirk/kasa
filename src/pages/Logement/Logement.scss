@@ -53,24 +53,6 @@
       &__tags {
         display: flex;
         gap: 10px;
-
-        span {
-          padding: 3px 10px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: #ff6060;
-          color: #fff;
-          border-radius: 10px;
-          font-size: 14px;
-          font-weight: 700;
-
-          @media screen and (max-width: 1240px) {
-            padding: 2px 5px;
-            border-radius: 5px;
-            font-size: 10px;
-          }
-        }
       }
     }
 
