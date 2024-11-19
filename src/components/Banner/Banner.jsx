@@ -5,9 +5,11 @@ const Banner = ({ text, img }) => {
   return (
     <figure className="kasa-banner">
       <img src={img} alt="Banner" className="kasa-banner__img" />
-      <figcaption>
-        <h1>{text}</h1>
-      </figcaption>
+      {text ? (
+        <figcaption>
+          <h1>{text}</h1>
+        </figcaption>
+      ) : null}
     </figure>
   )
 }
