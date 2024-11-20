@@ -15,3 +15,112 @@ Projet d'OpenClassRoom pour la formation développeur front-end React.
 - Créer des composants avec React
 - Développer les routes d'une application web avec React Router
 - Initialiser une application web avec un framework
+
+## Structure du projet
+
+```
+.gitignore
+.prettierrc
+package.json
+public/
+  index.html
+  manifest.json
+  robots.txt
+  site.webmanifest
+README.md
+src/
+  assets/
+  components/
+    Banner/
+      Banner.jsx
+      Banner.scss
+    Card/
+      Card.jsx
+      Card.scss
+    Collapse/
+      assets/
+      Collapse.jsx
+      Collapse.scss
+    Footer/
+      Footer.jsx
+      Footer.scss
+    Gallery/
+      Gallery.jsx
+      Gallery.scss
+    Header/
+      Header.jsx
+      Header.scss
+    Host/
+      Host.jsx
+      Host.scss
+    Rating/
+      Rating.jsx
+      Rating.scss
+    Slideshow/
+      Slideshow.jsx
+      Slideshow.scss
+    Tag/
+      Tag.jsx
+      Tag.scss
+  index.jsx
+  index.scss
+  pages/
+    About/
+      About.jsx
+      About.scss
+    Error/
+      Error.jsx
+      Error.scss
+    Home/
+      Home.jsx
+      Home.scss
+    Logement/
+      Logement.jsx
+      Logement.scss
+  stores/
+    logements.json
+```
+
+## Installation
+
+1. Clonez le dépôt :
+
+   ```sh
+   git clone https://github.com/piirk/kasa.git
+   cd kasa
+   ```
+
+2. Installez les dépendances :
+   ```sh
+   npm install
+   ```
+
+## Utilisation
+
+Pour démarrer l'application en mode développement :
+
+```sh
+npm start
+```
+
+Pour créer un build de production :
+
+```sh
+npm run build
+```
+
+## Dépendances
+
+- React
+- React DOM
+- React Router DOM
+- React Scripts
+- Sass
+
+## Auteurs
+
+- [piirk](https://github.com/piirk)
+
+## Licence
+
+Ce projet est sous licence MIT.
