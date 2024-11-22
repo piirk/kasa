@@ -8,7 +8,6 @@ const Card = ({ id, cover, title }) => {
       <Link to={`/logement/${id}`}>
         <figure>
           <img src={cover} alt={title} />
-          <div className="kasa-thumb__overlay"></div>
           <figcaption>
             <h2>{title}</h2>
           </figcaption>
