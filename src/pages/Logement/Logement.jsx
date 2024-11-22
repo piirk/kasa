@@ -39,7 +39,7 @@ const Logement = () => {
         </div>
         <div className="kasa-logement__main-container__right">
           <Host host={logement.host} />
-          <Rating rating={parseInt(logement.rating)} />
+          <Rating rating={logement.rating} />
         </div>
       </div>
       <div className="kasa-logement__collapses-container">
