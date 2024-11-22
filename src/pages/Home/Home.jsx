@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner/Banner'
 import Gallery from '../../components/Gallery/Gallery'
 import logements from '../../stores/logements.json'
-import banner from '../../assets/home.png'
+import banner from './assets/banner-home.png'
 
 const Home = () => {
   return (

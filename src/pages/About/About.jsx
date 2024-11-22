@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner/Banner'
 import Collapse from '../../components/Collapse/Collapse'
 import './About.scss'
-import bannerAbout from '../../assets/about.png'
+import bannerAbout from './assets/banner-about.png'
 
 const mockData = [
   {
